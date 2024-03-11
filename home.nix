@@ -35,6 +35,7 @@
     ltrace
     lsof
     lm_sensors
+    amdgpu_top
 
     # vanity
     neofetch
@@ -55,6 +56,7 @@
     calf
     pavucontrol
     helvum
+    pulsemixer
 
     # icons and themes
     gnome.adwaita-icon-theme
