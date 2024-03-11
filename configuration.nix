@@ -26,7 +26,10 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  # enable wireguard for vpn, and allow it through the firewall
   networking.wireguard.enable = true;
+  networking.firewall.checkReversePath = "loose";
 
   # Enable sound
 
