@@ -20,6 +20,7 @@
     ethtool
     pciutils
     usbutils
+    brightnessctl
 
     # compression/decompression
     zip

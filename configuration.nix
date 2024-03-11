@@ -36,12 +36,20 @@
     jack.enable = true;
   };
 
-  # enable backlight control for members of video
-  programs.light.enable = true;
-
   # Enable file sync with syncthing
   services.syncthing = {
     enable = true;
+    user = "amesb";
+    group = "users";
+    dataDir = "/home/amesb";
+    configDir = "/home/amesb/.config/syncthing";
+    overrideDevices = true;
+
+    settings = {
+      devices = {
+        "thryclops" = { id = "GQPU2W2-SNQND73-U27FP4Q-PRNFCAE-BIJF7B6-X5JYBFA-BCV2URY-A6WAHAJ"; };
+      };
+    };
   };
 
   # have to let the system use my gpu even though it isn't technically
