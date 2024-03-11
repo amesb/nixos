@@ -55,7 +55,14 @@
     enableCompletion = true;
   };
 
-  programs.foot.enable = true;
+  programs.foot = {
+    enable = true;
+    settings = {
+      main = {
+        font = "monospace:size=14";
+      };
+    };
+  };
 
   services = {
     playerctld.enable = true;
