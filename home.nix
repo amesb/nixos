@@ -80,6 +80,7 @@
 
   services = {
     playerctld.enable = true;
+    cliphist.enable = true;
   };
 
   xdg = {

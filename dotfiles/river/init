@@ -123,8 +123,8 @@ riverctl map passthrough Super F11 enter-mode normal
 for mode in normal locked
 do
     # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
-    riverctl map $mode None XF86AudioRaiseVolume  spawn 'wpctl set-volume 5%+'
-    riverctl map $mode None XF86AudioLowerVolume  spawn 'wpctl set-volume 5%-'
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'wpctl set-volume @DEFAULT_SINK@ 5%+'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'wpctl set-volume @DEFAULT_SINK@ 5%-'
     riverctl map $mode None XF86AudioMute         spawn 'wpctl set-mute'
 
     # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
