@@ -96,6 +96,7 @@
   services = {
     playerctld.enable = true;
     cliphist.enable = true;
+    easyeffects.enable = true;
   };
 
   xdg = {
