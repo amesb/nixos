@@ -2,7 +2,7 @@
 
 {
   fileSystems."/" =
-    { device = "/dev/pool/root";
+    { device = lib.mkDefault "/dev/pool/root";
       fsType = "btrfs";
       options = [ "subvol=@" ];
     };
