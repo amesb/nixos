@@ -45,6 +45,8 @@
     slurp
     grim
     wl-screenrec
+    wl-clipboard
+    wtype
 
   ];
 
@@ -59,6 +61,10 @@
     enableCompletion = true;
   };
 
+  home.shellAliases = {
+    "nrs" = "sudo nixos-rebuild switch --flake /home/amesb/nixos";
+  };
+
   programs.foot = {
     enable = true;
     settings = {
@@ -70,16 +76,6 @@
 
   programs.firefox = {
     enable = true;
-    profiles."default" = {
-      search.default = "DuckDuckGo";
-      settings = {
-        "mousewheel.default.delta_multiplier_x" = 30;
-        "mousewheel.default.delta_multiplier_y" = 30;
-        "mousewheel.default.delta_multiplier_z" = 30;
-
-        "media.ffmpeg.vaapi.enabled" = true;
-      };
-    };
   };
 
   programs.neovim = {

@@ -146,6 +146,18 @@ riverctl border-color-unfocused 0x586e75
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
 
+# configure touchpad
+
+TOUCHPAD="pointer-2362-628-PIXA3854:00_093A:0274_Touchpad"
+riverctl input $TOUCHPAD events enabled
+riverctl input $TOUCHPAD accel-profile adaptive
+riverctl input $TOUCHPAD click-method clickfinger
+riverctl input $TOUCHPAD drag enabled
+riverctl input $TOUCHPAD natural-scroll enabled
+riverctl input $TOUCHPAD tap enabled
+riverctl input $TOUCHPAD tap-button-map left-right-middle
+riverctl input $TOUCHPAD scroll-method two-finger
+
 # Make all views with an app-id that starts with "float" and title "foo" start floating.
 #riverctl rule-add -app-id 'float*' -title 'foo' float
 
