@@ -41,6 +41,13 @@
     enable = true;
   };
 
+  # have to let the system use my gpu even though it isn't technically
+  # reproduceable due to gpu driver shennanigans
+  hardware.opengl = {
+    enable = true;
+    driSupport.enable = true;
+  };
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
@@ -82,6 +89,12 @@
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
+  ];
+
+  fonts.packages = with pkgs; [
+    dejavu_fonts
+    noto-fonts
+    nerdfonts
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
