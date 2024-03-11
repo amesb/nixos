@@ -41,6 +41,7 @@
 
     # graphical utilities
     bemenu
+    keepassxc
   ];
 
   programs.git = {
@@ -75,6 +76,18 @@
 
   services = {
     playerctld.enable = true;
+  };
+
+  xdg = {
+    userDirs = {
+      desktop = "/home/amesb/desktop";
+      documents = "/home/amesb/documents";
+      download = "/home/amesb/downloads";
+      music = "/home/amesb/storage/media/music";
+      pictures = "/home/amesb/storage/media/images";
+      videos = "/home/amesb/storage/media/videos";
+      publicShare = "/home/amesb/share";
+    };
   };
 
   home.stateVersion = "23.11";
