@@ -63,6 +63,8 @@
     };
   };
 
+  programs.dconf.enable = true;
+
   # have to let the system use my gpu even though it isn't technically
   # reproduceable due to gpu driver shennanigans
   hardware.opengl = {
@@ -112,6 +114,8 @@
     wget
     git
   ];
+
+  programs.steam.enable = true;
 
   fonts.packages = with pkgs; [
     dejavu_fonts

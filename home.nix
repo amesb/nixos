@@ -9,7 +9,7 @@
     enable = true;
     systemd.enable = true;
 
-    extraConfig = import ./dotfiles/river/init;
+    extraConfig = import ./config/river/init.nix;
   };
 
   home.packages = with pkgs; [
@@ -47,22 +47,31 @@
     wl-screenrec
     wl-clipboard
     wtype
+    gnome.dconf-editor
+    playerctl
 
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "Bryan Ames";
-    userEmail = "b130610@gmail.com";
+  home.shellAliases = {
+    "nrs" = "sudo nixos-rebuild switch --flake /home/amesb/nixos";
   };
+
 
   programs.bash = {
     enable = true;
     enableCompletion = true;
   };
 
-  home.shellAliases = {
-    "nrs" = "sudo nixos-rebuild switch --flake /home/amesb/nixos";
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Bryan Ames";
+    userEmail = "b130610@gmail.com";
   };
 
   programs.foot = {
@@ -78,10 +87,10 @@
     enable = true;
   };
 
-  programs.neovim = {
+  programs.mangohud = {
     enable = true;
-    viAlias = true;
-    vimAlias = true;
+    enableSessionWide = true;
+    settings = import ./config/mangohud-config.nix;
   };
 
   services = {
@@ -102,6 +111,12 @@
       videos = "/home/amesb/storage/media/videos";
       publicShare = "/home/amesb/share";
     };
+  };
+
+  dconf.settings = {
+    "org.gnome.desktop.interface" = {
+      color-scheme = "prefer-dark";
+     };
   };
 
   home.stateVersion = "23.11";
