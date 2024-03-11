@@ -53,6 +53,11 @@
     # audio tools
     lsp-plugins
     calf
+    pavucontrol
+    helvum
+
+    # icons and themes
+    gnome.adwaita-icon-theme
 
   ];
 
