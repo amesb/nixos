@@ -50,6 +50,10 @@
     gnome.dconf-editor
     playerctl
 
+    # audio tools
+    lsp-plugins
+    calf
+
   ];
 
   home.shellAliases = {
