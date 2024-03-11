@@ -52,6 +52,12 @@
     };
   };
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+  };
+
   # have to let the system use my gpu even though it isn't technically
   # reproduceable due to gpu driver shennanigans
   hardware.opengl = {

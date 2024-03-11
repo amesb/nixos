@@ -79,7 +79,10 @@
   };
 
   xdg = {
+    enable = true;
     userDirs = {
+      createDirectories = true;
+
       desktop = "/home/amesb/desktop";
       documents = "/home/amesb/documents";
       download = "/home/amesb/downloads";
