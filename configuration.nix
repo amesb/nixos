@@ -41,6 +41,9 @@
     jack.enable = true;
   };
 
+  # enable Power Profiles Daemon for improved battery life
+  services.power-profiles-daemon.enable = true;
+
   # Enable file sync with syncthing
   services.syncthing = {
     enable = true;
