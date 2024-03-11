@@ -26,6 +26,21 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable sound
+
+  services.pipewire = {
+    enable = true;
+    audio.enable = true;
+    wireplumber.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  # Enable file sync with syncthing
+  services.syncthing = {
+    enable = true;
+  };
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 

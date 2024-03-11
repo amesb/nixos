@@ -4,6 +4,14 @@
   home.username = "amesb";
   home.homeDirectory = "/home/amesb";
 
+  # river window manager for desktop environment
+  wayland.windowManager.river = {
+    enable = true;
+    systemd.enable = true;
+
+    extraConfig = import ./dotfiles/river/init;
+  };
+
   home.packages = with pkgs; [
     # general utilities
     file
@@ -29,6 +37,11 @@
 
     # vanity
     neofetch
+
+    # graphical utilities
+    bemenu
+    light
+
   ];
 
   programs.git = {
@@ -40,6 +53,12 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
+  };
+
+  programs.foot.enable = true;
+
+  services = {
+    playerctld.enable = true;
   };
 
   home.stateVersion = "23.11";
