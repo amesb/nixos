@@ -39,9 +39,13 @@
     # vanity
     neofetch
 
-    # graphical utilities
+    # gui software
     bemenu
     keepassxc
+    slurp
+    grim
+    wl-screenrec
+
   ];
 
   programs.git = {
