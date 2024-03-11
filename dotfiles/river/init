@@ -9,6 +9,9 @@
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super+Shift Return spawn foot
 
+# Super+Space to open bemenu programl launcher
+riverctl map normal Super Space spawn "bemenu-run -l 15 --fn 'monospace 14'"
+
 # Super+Q to close the focused view
 riverctl map normal Super Q close
 
@@ -94,7 +97,7 @@ riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
 # Super+Space to toggle float
-riverctl map normal Super Space toggle-float
+riverctl map normal Super Z toggle-float
 
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen

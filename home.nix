@@ -40,8 +40,6 @@
 
     # graphical utilities
     bemenu
-    light
-
   ];
 
   programs.git = {
@@ -62,6 +60,16 @@
         font = "monospace:size=14";
       };
     };
+  };
+
+  programs.firefox = {
+    enable = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
   };
 
   services = {

@@ -36,6 +36,9 @@
     jack.enable = true;
   };
 
+  # enable backlight control for members of video
+  programs.light.enable = true;
+
   # Enable file sync with syncthing
   services.syncthing = {
     enable = true;
@@ -76,7 +79,7 @@
   users.users.amesb = {
     isNormalUser = true;
     description = "Bryan Ames";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
     packages = with pkgs; [];
   };
 
