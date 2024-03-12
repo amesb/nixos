@@ -23,4 +23,15 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  # have to let the system use my gpu even though it isn't technically
+  # reproduceable due to gpu driver shennanigans
+  hardware.opengl = {
+    enable = true;
+    driSupport.enable = true;
+    extraPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
 }

@@ -47,6 +47,18 @@
   # enable non-priviledged mounting of disks through udisks
   services.udisks2.enable = true;
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+
+    config = {
+      common.default = [ "wlr" "gtk" ];
+    };
+  };
+
+  programs.dconf.enable = true;
+
   # Enable file sync with syncthing
   services.syncthing = {
     enable = true;
@@ -63,23 +75,9 @@
     };
   };
 
-  xdg.portal = {
+  services.ollama = {
     enable = true;
-    wlr.enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
-
-    config = {
-      common.default = [ "wlr" "gtk" ];
-    };
-  };
-
-  programs.dconf.enable = true;
-
-  # have to let the system use my gpu even though it isn't technically
-  # reproduceable due to gpu driver shennanigans
-  hardware.opengl = {
-    enable = true;
-    driSupport.enable = true;
+    acceleration = "rocm";
   };
 
   # Set your time zone.
