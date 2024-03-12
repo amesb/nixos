@@ -62,6 +62,11 @@
     # icons and themes
     gnome.adwaita-icon-theme
 
+    # media tools
+    adl
+    mpv
+    ffmpeg
+    imv
   ];
 
   home.shellAliases = {
