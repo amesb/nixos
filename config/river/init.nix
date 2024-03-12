@@ -12,6 +12,12 @@ riverctl map normal Super+Shift Return spawn foot
 # Super+Space to open bemenu programl launcher
 riverctl map normal Super Space spawn "bemenu-run -l 15 --fn 'monospace 14'"
 
+# Super+P to take a screenshot
+riverctl map normal Super P spawn 'grim -g "$(slurp)" /home/amesb/screenshots/$(date +%F_%T).png'
+
+# Super+Shift+P to take a full screenshot
+riverctl map normal Super+Shift P spawn 'grim /home/amesb/screenshots/$(date +%F_%T).png'
+
 # Super+Q to close the focused view
 riverctl map normal Super Q close
 

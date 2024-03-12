@@ -71,6 +71,9 @@
     adl
     anime-downloader
     trackma
+
+    # games
+    prismlauncher
   ];
 
   home.shellAliases = {
