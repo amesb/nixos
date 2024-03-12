@@ -63,10 +63,12 @@
     gnome.adwaita-icon-theme
 
     # media tools
-    adl
     mpv
     ffmpeg
     imv
+
+    adl
+    trackma
   ];
 
   home.shellAliases = {
