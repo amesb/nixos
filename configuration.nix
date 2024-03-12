@@ -44,6 +44,9 @@
   # enable Power Profiles Daemon for improved battery life
   services.power-profiles-daemon.enable = true;
 
+  # enable non-priviledged mounting of disks through udisks
+  services.udisks2.enable = true;
+
   # Enable file sync with syncthing
   services.syncthing = {
     enable = true;
