@@ -21,6 +21,7 @@
     pciutils
     usbutils
     brightnessctl
+    bc
 
     # compression/decompression
     zip
