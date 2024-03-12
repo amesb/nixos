@@ -68,6 +68,7 @@
     imv
 
     adl
+    anime-downloader
     trackma
   ];
 
