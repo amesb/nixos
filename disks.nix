@@ -13,12 +13,6 @@
       fsType = "vfat";
     };
 
-  fileSystems."/home/amesb/mount" = {
-    device = "/run/media/amesb";
-    options = [ "bind" ];
-  };
-
-
   #fileSystems."/storage" =
   #  { device = "/dev/2280pool/storage";
   #    depends = [ "/" ];
