@@ -51,6 +51,7 @@
     wtype
     gnome.dconf-editor
     playerctl
+    stalonetray
 
     # audio tools
     lsp-plugins
