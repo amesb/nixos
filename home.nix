@@ -54,6 +54,7 @@
     playerctl
     stalonetray
     obsidian
+    blender-hip
 
     # audio tools
     lsp-plugins
