@@ -52,6 +52,7 @@
     gnome.dconf-editor
     playerctl
     stalonetray
+    lxqt.pcmanfm-qt
 
     # audio tools
     lsp-plugins
