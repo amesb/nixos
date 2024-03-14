@@ -53,6 +53,7 @@
     gnome.dconf-editor
     playerctl
     stalonetray
+    obsidian
 
     # audio tools
     lsp-plugins
