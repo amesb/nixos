@@ -22,6 +22,7 @@
     usbutils
     brightnessctl
     bc
+    jmtpfs
 
     # compression/decompression
     zip
@@ -52,7 +53,6 @@
     gnome.dconf-editor
     playerctl
     stalonetray
-    lxqt.pcmanfm-qt
 
     # audio tools
     lsp-plugins

@@ -59,10 +59,6 @@
 
   programs.dconf.enable = true;
 
-  # enable gvfs for special "filesystems" like mtp
-
-  services.gvfs.enable = true;
-
   # Enable file sync with syncthing
   services.syncthing = {
     enable = true;
