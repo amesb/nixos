@@ -66,13 +66,6 @@
     group = "users";
     dataDir = "/home/amesb";
     configDir = "/home/amesb/.config/syncthing";
-    overrideDevices = true;
-
-    settings = {
-      devices = {
-        "thryclops" = { id = "GQPU2W2-SNQND73-U27FP4Q-PRNFCAE-BIJF7B6-X5JYBFA-BCV2URY-A6WAHAJ"; };
-      };
-    };
   };
 
   services.ollama = {
