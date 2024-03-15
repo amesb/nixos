@@ -22,7 +22,7 @@
     usbutils
     brightnessctl
     bc
-    jmtpfs
+    graphviz
 
     # compression/decompression
     zip
@@ -55,7 +55,7 @@
     stalonetray
     obsidian
     blender-hip
-    graphviz
+    gimp
 
     # audio tools
     lsp-plugins
