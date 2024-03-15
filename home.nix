@@ -55,6 +55,7 @@
     stalonetray
     obsidian
     blender-hip
+    graphviz
 
     # audio tools
     lsp-plugins
