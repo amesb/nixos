@@ -9,7 +9,7 @@
     enable = true;
     systemd.enable = true;
 
-    extraConfig = import ./config/river/init.nix;
+    extraConfig = import ./dotfiles/river/init.nix;
   };
 
   home.packages = with pkgs; [
@@ -57,6 +57,8 @@
     obsidian
     blender-hip
     gimp
+    inkscape
+    libreoffice
 
     # audio tools
     lsp-plugins
