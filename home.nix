@@ -121,7 +121,7 @@
   programs.mangohud = {
     enable = true;
     enableSessionWide = true;
-    settings = import ./config/mangohud-config.nix;
+    settings = import ./dotfiles/mangohud-config.nix;
   };
 
   services = {

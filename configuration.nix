@@ -73,6 +73,12 @@
     acceleration = "rocm";
   };
 
+  programs.gamescope =
+  {
+    enable = true;
+    capSysNice = true;
+  };
+
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
