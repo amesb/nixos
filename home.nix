@@ -23,6 +23,7 @@
     brightnessctl
     bc
     graphviz
+    gnuplot
 
     # compression/decompression
     zip
