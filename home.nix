@@ -39,6 +39,7 @@
     lsof
     lm_sensors
     amdgpu_top
+    rocmPackages.rocm-smi
 
     # vanity
     neofetch
