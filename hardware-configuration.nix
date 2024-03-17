@@ -25,6 +25,9 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
+  # enable non-root access to keyboard firmware
+  hardware.keyboard.qmk.enable = true;
+
   # have to let the system use my gpu even though it isn't technically
   # reproduceable due to gpu driver shennanigans
   hardware.opengl = {
