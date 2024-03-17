@@ -12,6 +12,7 @@
   boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "amdgpu.abmlevel=2" ];
 
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
