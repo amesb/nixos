@@ -114,6 +114,8 @@
     description = "Bryan Ames";
     extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
     packages = with pkgs; [];
+    shell = pkgs.fish;
+    ignoreShellProgramCheck = true;
   };
 
   # Allow unfree packages
