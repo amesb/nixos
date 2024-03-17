@@ -66,6 +66,7 @@
     pavucontrol
     helvum
     pulsemixer
+    roomeqwizard
 
     # icons and themes
     gnome.adwaita-icon-theme
