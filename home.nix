@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "amesb";
@@ -83,6 +83,9 @@
 
     # games
     prismlauncher
+
+    # ai tools
+    inputs.ollama.packages.x86_64-linux.rocm
   ];
 
   home.shellAliases = {
