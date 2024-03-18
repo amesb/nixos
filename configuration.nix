@@ -52,6 +52,7 @@
   # enable tlp
   services.tlp = {
     enable = true;
+    settings = import ./power/cattywampus.nix;
   };
 
   # enable non-priviledged mounting of disks through udisks
