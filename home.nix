@@ -40,6 +40,7 @@
     lm_sensors
     amdgpu_top
     rocmPackages.rocm-smi
+    ryzenadj
 
     # vanity
     neofetch
