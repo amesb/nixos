@@ -73,10 +73,10 @@
     configDir = "/home/amesb/.config/syncthing";
   };
 
-  services.ollama = {
-    enable = true;
-    acceleration = "rocm";
-  };
+#  services.ollama = {
+#    enable = true;
+#    acceleration = "rocm";
+#  };
 
   programs.gamescope =
   {
