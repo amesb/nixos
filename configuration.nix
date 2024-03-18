@@ -44,10 +44,15 @@
   };
 
   # enable Power Profiles Daemon for improved battery life
-  services.power-profiles-daemon.enable = true;
+  #services.power-profiles-daemon.enable = true;
 
   # enable auto-cpufreq (can only have one power management software on at a time
   # services.auto-cpufreq.enable = true;
+
+  # enable tlp
+  services.tlp = {
+    enable = true;
+  };
 
   # enable non-priviledged mounting of disks through udisks
   services.udisks2.enable = true;
