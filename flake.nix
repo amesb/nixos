@@ -11,12 +11,9 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # most up to date ollama builds
-    ollama.url = "github:abysssol/ollama-flake";
   };
 
-  outputs = {self, nixpkgs, home-manager, ollama, ...}@inputs: {
+  outputs = {self, nixpkgs, home-manager, ...}@inputs: {
     # configuration for cattywampus
     nixosConfigurations.cattywampus = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
