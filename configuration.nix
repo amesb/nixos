@@ -55,6 +55,16 @@
     settings = import power/cattywampus.nix;
   };
 
+  # programs.corectrl.enable = true;
+
+  services.fprintd.enable = true;
+  #services.fprintd.tod.enable = true;
+  #services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
+  #security.pam.services = {
+  #  login.fprintAuth = true;
+  #  sudo.fprintAuth = true;
+  #};
+
   # enable non-priviledged mounting of disks through udisks
   services.udisks2.enable = true;
 
