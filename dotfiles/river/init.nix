@@ -102,6 +102,9 @@ all_tags=$(((1 << 32) - 1))
 riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
+# Widget Tag on Super+D
+riverctl map normal Super toggle-focused-tags 9
+
 # Super+Space to toggle float
 riverctl map normal Super Z toggle-float
 
@@ -131,10 +134,9 @@ do
     # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
     riverctl map $mode None XF86AudioRaiseVolume  spawn 'wpctl set-volume @DEFAULT_SINK@ 5%+'
     riverctl map $mode None XF86AudioLowerVolume  spawn 'wpctl set-volume @DEFAULT_SINK@ 5%-'
-    riverctl map $mode None XF86AudioMute         spawn 'wpctl set-mute'
+    riverctl map $mode None XF86AudioMute         spawn 'wpctl set-mute @DEFAULT_SINK@ toggle'
 
     # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
-    riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
     riverctl map $mode None XF86AudioPlay  spawn 'playerctl play-pause'
     riverctl map $mode None XF86AudioPrev  spawn 'playerctl previous'
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
@@ -169,6 +171,20 @@ riverctl input $TOUCHPAD scroll-method two-finger
 
 # Make all views with app-id "bar" and any title use client-side decorations
 #riverctl rule-add -app-id "bar" csd
+
+# Configure special tags
+scratch_tag=$((1 << 20 ))
+sysmon_tag=$((1 << 21 ))
+
+riverctl map normal Super S toggle-focused-tags $scratch_tag		# toggle the scratchpad
+riverctl map normal Super+Shift S set-view-tags $scratch_tag		# send windows to the scratchpad
+
+riverctl map normal Super W toggle-focused-tags $sysmon_tag		# toggle the system monitor tag
+riverctl map normal Super+Shift W set-view-tags $sysmon_tag		# send windows to the system monitor tag
+
+# Set spawn tagmask to ensure new windows do not have the scratchpad tag unless explicitly set.
+all_but_special_tags=$(( ((1 << 32) - 1) ^ $scratch_tag ^ $sysmon_tag))
+riverctl spawn-tagmask $all_but_special_tags
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
