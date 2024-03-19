@@ -80,6 +80,16 @@
 
   programs.dconf.enable = true;
 
+  # enable ssh key management agent
+  programs.ssh = {
+    startAgent = true;
+    agentTimeout = "2h";
+    extraConfig = ''
+      AddKeysToAgent yes
+    '';
+
+  };
+
   # Enable file sync with syncthing
   services.syncthing = {
     enable = true;
