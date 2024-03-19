@@ -36,6 +36,10 @@
     extraPackages = with pkgs; [
       vaapiVdpau
       libvdpau-va-gl
+      mangohud
+    ];
+    extraPackages32 = with pkgs; [
+      mangohud
     ];
   };
 }
