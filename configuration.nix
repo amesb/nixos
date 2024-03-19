@@ -132,6 +132,9 @@
     packages = with pkgs; [];
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiF+v8UWPwZGfHfv2sFciVPnu41YEZXNU68pgGkmzMM b130610@gmail.com"
+    ];
   };
 
   # Allow unfree packages
