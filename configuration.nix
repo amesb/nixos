@@ -44,16 +44,16 @@
   };
 
   # enable Power Profiles Daemon for improved battery life
-  #services.power-profiles-daemon.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   # enable auto-cpufreq (can only have one power management software on at a time
   # services.auto-cpufreq.enable = true;
 
   # enable tlp
-  services.tlp = {
-    enable = true;
-    settings = import power/cattywampus.nix;
-  };
+  #services.tlp = {
+  #  enable = true;
+  #  settings = import power/cattywampus.nix;
+  #};
 
   # programs.corectrl.enable = true;
 
