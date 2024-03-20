@@ -174,13 +174,17 @@ riverctl input $TOUCHPAD scroll-method two-finger
 
 # Configure special tags
 scratch_tag=$((1 << 20 ))
-sysmon_tag=$((1 << 21 ))
+nix_edit_tag=$((1 << 21 ))
+sysmon_tag=$((1 << 22 ))
 
-riverctl map normal Super S toggle-focused-tags $scratch_tag		# toggle the scratchpad
-riverctl map normal Super+Shift S set-view-tags $scratch_tag		# send windows to the scratchpad
+riverctl map normal Super S toggle-focused-tags $scratch_tag		# toggle the scratch tag
+riverctl map normal Super+Shift S set-view-tags $scratch_tag		# send windows to the scratch tag
 
-riverctl map normal Super W toggle-focused-tags $sysmon_tag		# toggle the system monitor tag
-riverctl map normal Super+Shift W set-view-tags $sysmon_tag		# send windows to the system monitor tag
+riverctl map normal Super N toggle-focused-tags $nix_edit_tag		# toggle the nix_edit_tag
+riverctl map normal Super+Shift N set-view-tags $nix_edit_tag		# send windows to the nix_edit_tag
+
+riverctl map normal Super M toggle-focused-tags $sysmon_tag		# toggle the system monitor tag
+riverctl map normal Super+Shift M set-view-tags $sysmon_tag		# send windows to the system monitor tag
 
 # Set spawn tagmask to ensure new windows do not have the scratchpad tag unless explicitly set.
 all_but_special_tags=$(( ((1 << 32) - 1) ^ $scratch_tag ^ $sysmon_tag))
@@ -190,4 +194,16 @@ riverctl spawn-tagmask $all_but_special_tags
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6 &
+
+# launch default session apps
+riverctl spawn footclient
+
+~/bin/sysmon.sh
+~/bin/nix-edit.sh
+
+riverctl spawn firefox
+sleep 0.2
+riverctl set-view-tags $((1 << 2 ))
+
+riverctl spawn footclient
 ''
