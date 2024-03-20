@@ -204,7 +204,7 @@ sleep 0.1
 
 riverctl spawn firefox
 sleep 1
-riverctl set-view-tags $((1 << 2 ))
+riverctl set-view-tags $((1 << 1 ))
 
 riverctl spawn footclient
 ''
