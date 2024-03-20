@@ -201,10 +201,7 @@ sleep 0.1
 
 /home/amesb/bin/sysmon.sh
 /home/amesb/bin/nix-edit.sh
+/home/amesb/bin/scratchpad.sh
 
 riverctl spawn firefox
-sleep 1
-riverctl set-view-tags $((1 << 1 ))
-
-riverctl spawn footclient
 ''
