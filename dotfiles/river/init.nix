@@ -203,7 +203,7 @@ sleep 0.1
 /home/amesb/bin/nix-edit.sh
 
 riverctl spawn firefox
-sleep 1
+sleep 0.5
 riverctl set-view-tags $((1 << 1 ))
 
 riverctl spawn footclient
