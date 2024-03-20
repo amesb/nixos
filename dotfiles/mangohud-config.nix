@@ -1,6 +1,6 @@
 {
-fps_limit = "60,82.5,165,0";
-fps_limit_method = "late";
+fps_limit = "0,33,55,83,165";
+fps_limit_method = "early";
 full = true;
 #text_outline = true;
 #toggle_hud="Shift_L+F12";

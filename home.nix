@@ -22,8 +22,7 @@
     usbutils
     brightnessctl
     bc
-    graphviz
-    gnuplot
+    fw-ectool
 
     # compression/decompression
     zip
