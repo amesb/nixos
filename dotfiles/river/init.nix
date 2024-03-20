@@ -198,11 +198,11 @@ rivertile -view-padding 6 -outer-padding 6 &
 # launch default session apps
 riverctl spawn footclient
 
-~/bin/sysmon.sh
-~/bin/nix-edit.sh
+/home/amesb/bin/sysmon.sh
+/home/amesb/bin/nix-edit.sh
 
 riverctl spawn firefox
-sleep 0.2
+sleep 1
 riverctl set-view-tags $((1 << 2 ))
 
 riverctl spawn footclient
