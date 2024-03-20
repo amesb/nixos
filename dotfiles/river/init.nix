@@ -196,7 +196,7 @@ riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6 &
 
 # launch default session apps
-foot -s
+foot -s &
 sleep 0.1
 
 /home/amesb/bin/sysmon.sh
