@@ -174,8 +174,8 @@ riverctl input $TOUCHPAD scroll-method two-finger
 
 # Configure special tags
 scratch_tag=$((1 << 20 ))
-nix_edit_tag=$((1 << 21 ))
-sysmon_tag=$((1 << 22 ))
+sysmon_tag=$((1 << 21 ))
+nix_edit_tag=$((1 << 22 ))
 
 riverctl map normal Super S toggle-focused-tags $scratch_tag		# toggle the scratch tag
 riverctl map normal Super+Shift S set-view-tags $scratch_tag		# send windows to the scratch tag
