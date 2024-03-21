@@ -14,7 +14,7 @@
     enable = true;
     systemd.enable = true;
 
-    extraConfig = import ./dotfiles/river/init.nix;
+    extraConfig = import ../dotfiles/river/init.nix;
   };
 
   programs.bash = {
@@ -55,7 +55,7 @@
   programs.mangohud = {
     enable = true;
     enableSessionWide = true;
-    settings = import ./dotfiles/mangohud-config.nix;
+    settings = import ../dotfiles/mangohud-config.nix;
   };
 
   services = {
