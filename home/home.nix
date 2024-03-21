@@ -1,8 +1,13 @@
+# common home-manager configuration for all hosts
+
 { config, pkgs, inputs, ... }:
 
 {
   home.username = "amesb";
   home.homeDirectory = "/home/amesb";
+
+  # allow home-manager to manage itself
+  programs.home-manager.enable = true;
 
   # river window manager for desktop environment
   wayland.windowManager.river = {
@@ -11,84 +16,6 @@
 
     extraConfig = import ./dotfiles/river/init.nix;
   };
-
-  home.packages = with pkgs; [
-    # general utilities
-    file
-    which
-    tree
-    ethtool
-    pciutils
-    usbutils
-    brightnessctl
-    bc
-    fw-ectool
-
-    # compression/decompression
-    zip
-    xz
-    unzip
-    p7zip
-
-    # system monitoring
-    htop
-    btop
-    strace
-    ltrace
-    lsof
-    lm_sensors
-    amdgpu_top
-    rocmPackages.rocm-smi
-    ryzenadj
-
-    # vanity
-    neofetch
-
-    # gui software
-    bemenu
-    keepassxc
-    slurp
-    grim
-    wl-screenrec
-    wl-clipboard
-    wtype
-    gnome.dconf-editor
-    playerctl
-    stalonetray
-    obsidian
-    blender-hip
-    gimp
-    inkscape
-    libreoffice
-
-    # audio tools
-    lsp-plugins
-    calf
-    pavucontrol
-    helvum
-    pulsemixer
-    roomeqwizard
-
-    # icons and themes
-    gnome.adwaita-icon-theme
-
-    # media tools
-    mpv
-    ffmpeg
-    imv
-
-    adl
-    anime-downloader
-    trackma
-
-    # games
-    prismlauncher
-  ];
-
-  home.shellAliases = {
-    "nrs" = "sudo nixos-rebuild switch --flake /home/amesb/nixos";
-  };
-
 
   programs.bash = {
     enable = true;
@@ -158,7 +85,80 @@
      };
   };
 
-  home.stateVersion = "23.11";
+  home.packages = with pkgs; [
+    # general utilities
+    file
+    which
+    tree
+    ethtool
+    pciutils
+    usbutils
+    brightnessctl
+    bc
 
-  programs.home-manager.enable = true;
+    # compression/decompression
+    zip
+    xz
+    unzip
+    p7zip
+
+    # system monitoring
+    htop
+    btop
+    strace
+    ltrace
+    lsof
+    lm_sensors
+    amdgpu_top
+    rocmPackages.rocm-smi
+    ryzenadj
+
+    # vanity
+    neofetch
+
+    # gui software
+    bemenu
+    keepassxc
+    slurp
+    grim
+    wl-screenrec
+    wl-clipboard
+    wtype
+    gnome.dconf-editor
+    playerctl
+    stalonetray
+    obsidian
+    blender-hip
+    gimp
+    inkscape
+    libreoffice
+
+    # audio tools
+    lsp-plugins
+    calf
+    pavucontrol
+    helvum
+    pulsemixer
+
+    # icons and themes
+    gnome.adwaita-icon-theme
+
+    # media tools
+    mpv
+    ffmpeg
+    imv
+
+    # anime stuff
+    adl
+    anime-downloader
+    trackma
+
+    # games
+    prismlauncher
+  ];
+
+  # aliases
+  home.shellAliases = {
+    "nrs" = "sudo nixos-rebuild switch --flake /home/amesb/nixos";
+  };
 }
