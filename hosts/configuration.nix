@@ -4,7 +4,8 @@
 {
   imports = [
     # a custom service to hibernate after sleeping for a set period
-    ../custom/suspend-then-hibernate.nix
+    # disabled because of issues actually getting the hibernation to happen
+    # ../custom/suspend-then-hibernate.nix
   ];
 
   # nix configuration
