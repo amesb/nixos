@@ -1,6 +1,6 @@
 # cattywampus system configuration
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
