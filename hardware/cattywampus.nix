@@ -6,6 +6,7 @@
 {
   imports =
     [
+      # disk configuration
       ./hardware/disks/cattywampus.nix
     ];
 
