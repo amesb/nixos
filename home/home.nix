@@ -3,9 +3,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-  home.username = "amesb";
-  home.homeDirectory = "/home/amesb";
-
   # allow home-manager to manage itself
   programs.home-manager.enable = true;
 
