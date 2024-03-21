@@ -2,6 +2,11 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = [
+    # a custom service to hibernate after sleeping for a set period
+    ../custom/suspend-then-hibernate.nix
+  ];
+
   # nix configuration
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
