@@ -7,7 +7,7 @@
   imports =
     [
       # disk configuration
-      ./hardware/disks/cattywampus.nix
+      ./disks/cattywampus.nix
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
