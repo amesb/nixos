@@ -15,22 +15,41 @@
 
   outputs = {self, nixpkgs, home-manager, ...}@inputs: {
     # configuration for cattywampus
-    nixosConfigurations.cattywampus = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        # reuse the old fashioned configuration for basics
-        ./configuration.nix
+    nixosConfigurations = {
+      cattywampus = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          # reuse the old fashioned configuration for basics
+          ./hosts/cattywampus.nix
 
-        # use home-manager as a nixos module rather than standalone
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.amesb = {
-            imports = [ ./home.nix ];
-          };
-        }
-      ];
+          # use home-manager as a nixos module rather than standalone
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.amesb = {
+              imports = [ ./home/cattywampus.nix ];
+            };
+          }
+        ];
+      };
+      fliplop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          # reuse the old fashioned configuration for basics
+          ./hosts/fliplop.nix
+
+          # use home-manager as a nixos module rather than standalone
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.amesb = {
+              imports = [ ./home/fliplop.nix ];
+            };
+          }
+        ];
+      };
     };
   };
 }
