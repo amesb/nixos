@@ -6,12 +6,14 @@
 {
   imports =
     [
-      ./hardware/disks/cattywampus.nix
+      (modulesPath + "/installer/scan/not-detected.nix")
+      # disk configuration
+      ./disks/cattywampus.nix
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ "amdgpu" "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ "amdgpu.abmlevel=1" ];
 

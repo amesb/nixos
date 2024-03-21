@@ -1,5 +1,5 @@
 # non-host-specific system configuration
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # nix configuration

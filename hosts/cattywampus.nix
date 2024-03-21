@@ -1,14 +1,14 @@
 # cattywampus system configuration
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [ 
       # include general system configurations
-      ./hosts/configuration.nix
+      ./configuration.nix
       # include hardware specific configurations
-      ./hardware/cattywampus.nix
+      ../hardware/cattywampus.nix
     ];
 
   # Bootloader.
@@ -20,10 +20,6 @@
 
   # hostname
   networking.hostName = "cattywampus"; # Define your hostname.
-
-  # enable Power Profiles Daemon for improved battery life
-  services.power-profiles-daemon.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.amesb = {
     isNormalUser = true;
