@@ -10,7 +10,7 @@
   home.packages = with pkgs; [
     # framework embedded controll configuration
     fw-ectool
-  };
+  ];
 
   # the state version that the system had when it was originally installed
   home.stateVersion = "23.11";
