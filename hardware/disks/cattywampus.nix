@@ -13,12 +13,5 @@
       fsType = "vfat";
     };
 
-  #fileSystems."/storage" =
-  #  { device = "/dev/2280pool/storage";
-  #    depends = [ "/" ];
-  #    fsType = "btrfs";
-  #    options = [ "subvol=@" "compress=zstd" "noatime" ];
-  #  };
-
   swapDevices = [ { device = "/dev/2230pool/swap"; } ];
 }

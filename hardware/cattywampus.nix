@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      ./hardware/disks/cattywampus.nix
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
@@ -14,15 +15,13 @@
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ "amdgpu.abmlevel=1" ];
 
+  # enable fingerprint reader
   services.fprintd.enable = true;
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
+  # enable Power Profiles Daemon for improved battery life
+  services.power-profiles-daemon.enable = true;
 
+  # platform and cpu options
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
