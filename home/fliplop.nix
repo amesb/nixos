@@ -7,6 +7,15 @@
     ./home.nix
   ];
 
+  # display configuration with kanshi
+  services.kanshi = {
+    enable = true;
+    profiles.default.outputs = [
+      { criteria = "DP-1"; mode = "3840x2160@240Hz"; scale = 1.0;  adaptiveSync = true; }
+    ];
+  };
+  
+
   # user configuration
   home.username = "amesb";
   home.homeDirectory = "/home/amesb";
