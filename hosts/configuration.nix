@@ -18,7 +18,9 @@
   #
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+  };
 
   # enable dhcp
   networking.useDHCP = lib.mkDefault true;
