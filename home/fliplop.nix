@@ -11,7 +11,7 @@
   services.kanshi = {
     enable = true;
     profiles.default.outputs = [
-      { criteria = "eDP-1"; mode = "3840x2160@240Hz"; scale = 1;  adaptiveSync = true; }
+      { criteria = "eDP-1"; mode = "3840x2160@240Hz"; scale = 1.0;  adaptiveSync = true; }
     ];
   };
   
