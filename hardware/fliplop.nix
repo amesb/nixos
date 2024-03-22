@@ -5,17 +5,14 @@
     [
       (modulesPath + "/installer/scan/not-detected.nix")
       # disk configuration
-      ./disks/cattywampus.nix
+      ./disks/fliplop.nix
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "amdgpu" "kvm-amd" ];
   boot.extraModulePackages = [ ];
-  boot.kernelParams = [ "amdgpu.abmlevel=1" ];
-
-  # enable fingerprint reader
-  services.fprintd.enable = true;
+  boot.kernelParams = [ ];
 
   # enable Power Profiles Daemon for improved battery life
   services.power-profiles-daemon.enable = true;
