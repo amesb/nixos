@@ -1,4 +1,4 @@
-# cattywampus home-manager configuration
+# fliplop home-manager configuration
 
 { config, pkgs, inputs, ... }:
 
@@ -7,9 +7,15 @@
     ./home.nix
   ];
 
-  home.packages = with pkgs; [
-  };
+  # user configuration
+  home.username = "amesb";
+  home.homeDirectory = "/home/amesb";
 
   # the state version that the system had when it was originally installed
   home.stateVersion = "23.11";
+
+  # extra packages
+  home.packages = with pkgs; [
+  ];
+
 }
