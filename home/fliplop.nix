@@ -25,8 +25,8 @@
 
   # display configuration
   xdg.configFile.way-display = {
-    source = "../dotfiles/way-displays/fliplop.yml";
-    target = "way-displays/cfg.yml";
+    source = ../dotfiles/way-displays/fliplop.yml;
+    target = way-displays/cfg.yml;
   };
 
   # extra packages
