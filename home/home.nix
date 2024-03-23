@@ -92,6 +92,7 @@
     usbutils
     brightnessctl
     bc
+    way-displays
 
     # compression/decompression
     zip
