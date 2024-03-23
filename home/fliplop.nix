@@ -23,6 +23,12 @@
   # the state version that the system had when it was originally installed
   home.stateVersion = "23.11";
 
+  # display configuration
+  xdg.configFile.way-display = {
+    source = "../dotfiles/way-displays/fliplop.yml";
+    target = "way-displays/cfg.yml";
+  };
+
   # extra packages
   home.packages = with pkgs; [
   ];
