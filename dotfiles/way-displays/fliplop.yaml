@@ -28,8 +28,8 @@ AUTO_SCALE_MIN: 1.0
 
 # Auto scale may be overridden for each display.
 SCALE:
-  NAME_DESC: 'Dell Inc. AW3225QF 2NLZXZ3 (DP-1)'
-  SCALE: 1
+    - NAME_DESC: 'Dell Inc. AW3225QF 2NLZXZ3 (DP-1)'
+      SCALE: 1
 
 # Override the preferred mode.
 # WARNING: this may result in an unusable display. See https://github.com/alex-courtis/way-displays#known-issues-with-workarounds
