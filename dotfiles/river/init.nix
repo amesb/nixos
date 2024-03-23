@@ -193,7 +193,7 @@ riverctl spawn-tagmask $all_but_special_tags
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+rivertile -view-padding 6 -outer-padding 0 &
 
 # enable way-displays for display configuration
 way-displays > /tmp/way-displays.$XDG_VTNR.$USER.log 2>&1 &
