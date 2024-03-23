@@ -82,6 +82,13 @@
      };
   };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 22;
+  };
+
   home.packages = with pkgs; [
     # general utilities
     file
@@ -130,6 +137,7 @@
     gimp
     inkscape
     libreoffice
+    bibata-cursors
 
     # audio tools
     lsp-plugins
