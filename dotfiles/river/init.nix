@@ -195,6 +195,9 @@ riverctl spawn-tagmask $all_but_special_tags
 riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6 &
 
+# enable way-displays for display configuration
+way-displays > /tmp/way-displays.$XDG_VTNR.$USER.log 2>&1 &
+
 # launch default session apps
 foot -s &
 sleep 0.1
