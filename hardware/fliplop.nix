@@ -10,8 +10,8 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "amdgpu" "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot.kernelModules = [ "amdgpu" "kvm-amd" "i2c-dev" "ddci_backlight" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
   boot.kernelParams = [ ];
 
   # enable Power Profiles Daemon for improved battery life
