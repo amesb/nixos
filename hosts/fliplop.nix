@@ -34,6 +34,20 @@
   };
 
   programs.steam.enable = true;
+  programs.gamemode = {
+    enable = true;
+    enableRenice = true;
+    settings = {
+      general = {
+        softrealtime = "auto";
+        renice = 10;
+      };
+    };
+  };
+
+  # enable network streaming of audio (export and import)
+  hardware.pulseaudio.zeroconf.discovery.enable
+  hardware.pulseaudio.zeroconf.publish.enable
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
