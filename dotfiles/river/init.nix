@@ -53,10 +53,10 @@ riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
 riverctl map normal Super+Shift L send-layout-cmd rivertile "main-count -1"
 
 # Super+Alt+{H,J,K,L} to move views
-riverctl map normal Super+Alt H move left 100
-riverctl map normal Super+Alt J move down 100
-riverctl map normal Super+Alt K move up 100
-riverctl map normal Super+Alt L move right 100
+riverctl map -repeat normal Super+Alt H move left 100
+riverctl map -repeat normal Super+Alt J move down 100
+riverctl map -repeat normal Super+Alt K move up 100
+riverctl map -repeat normal Super+Alt L move right 100
 
 # Super+Alt+Control+{H,J,K,L} to snap views to screen edges
 riverctl map normal Super+Alt+Control H snap left
@@ -65,10 +65,10 @@ riverctl map normal Super+Alt+Control K snap up
 riverctl map normal Super+Alt+Control L snap right
 
 # Super+Alt+Shift+{H,J,K,L} to resize views
-riverctl map normal Super+Alt+Shift H resize horizontal -100
-riverctl map normal Super+Alt+Shift J resize vertical 100
-riverctl map normal Super+Alt+Shift K resize vertical -100
-riverctl map normal Super+Alt+Shift L resize horizontal 100
+riverctl map -repeat normal Super+Alt+Shift H resize horizontal -100
+riverctl map -repeat normal Super+Alt+Shift J resize vertical 100
+riverctl map -repeat normal Super+Alt+Shift K resize vertical -100
+riverctl map -repeat normal Super+Alt+Shift L resize horizontal 100
 
 # Super + Left Mouse Button to move views
 riverctl map-pointer normal Super BTN_LEFT move-view
