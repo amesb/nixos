@@ -35,14 +35,6 @@
 
   programs.steam.enable = true;
 
-  # enable plasma 6 to try hdr stuff
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # enable gamescope session also for hdr stuff
-  programs.steam.gamescopeSession.enable = true;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
