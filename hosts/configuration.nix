@@ -16,7 +16,7 @@
   users.users.amesb = {
     isNormalUser = true;
     description = "Bryan Ames";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" "audio" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "input" "audio" "libvirtd" "i2c" ];
     packages = with pkgs; [];
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
