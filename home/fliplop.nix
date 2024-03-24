@@ -31,6 +31,7 @@
 
   # extra packages
   home.packages = with pkgs; [
+    ddcutil
   ];
 
 }
