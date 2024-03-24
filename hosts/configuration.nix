@@ -72,6 +72,10 @@
     };
   };
 
+  # enable virtualization via virtd and qemu
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   # enable ssh key management agent
   programs.ssh = {
     startAgent = true;
