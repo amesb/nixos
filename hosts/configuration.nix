@@ -33,12 +33,43 @@
   services.udisks2.enable = true;
 
   # Enable sound
+
+  # allow realtime permissions for pipewire
+  security.rtkit.enable = true; 
+
+  # configure pipewire for a balance of low latency and no artifacts
   services.pipewire = {
     enable = true;
     audio.enable = true;
     wireplumber.enable = true;
     pulse.enable = true;
     jack.enable = true;
+    extraConfig.pipewire."92-low-latency" = {
+      context.properties = {
+        default.clock.rate = 48000;
+        default.clock.quantum = 32;
+        default.clock.min-quantum = 32;
+        default.clock.max-quantum = 32;
+      };
+    };
+    extraConfig.pipewire-pulse."92-low-latency" = {
+      context.modules = [
+        {
+          name = "libpipewire-module-protocol-pulse";
+          args = {
+            pulse.min.req = "32/48000";
+            pulse.default.req = "32/48000";
+            pulse.max.req = "32/48000";
+            pulse.min.quantum = "32/48000";
+            pulse.max.quantum = "32/48000";
+          };
+        }
+      ];
+      stream.properties = {
+        node.latency = "32/48000";
+        resample.quality = 1;
+      };
+    };
   };
 
   # enable ssh key management agent
