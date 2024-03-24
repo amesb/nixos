@@ -166,6 +166,12 @@ riverctl input $TOUCHPAD tap enabled
 riverctl input $TOUCHPAD tap-button-map left-right-middle
 riverctl input $TOUCHPAD scroll-method two-finger
 
+# configure logitech wireless mouse
+
+MOUSE="pointer-1133-50509-Logitech_USB_Receiver"
+riverctl input $MOUSE events enabled
+riverctl input $MOUSE accel-profile flat
+
 # Make all views with an app-id that starts with "float" and title "foo" start floating.
 #riverctl rule-add -app-id 'float*' -title 'foo' float
 
