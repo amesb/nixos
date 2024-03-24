@@ -21,10 +21,6 @@
   # hostname
   networking.hostName = "fliplop"; # Define your hostname.
 
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
   programs.steam.enable = true;
   programs.gamemode = {
     enable = true;
