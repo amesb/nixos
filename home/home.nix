@@ -161,6 +161,7 @@
 
     # games
     prismlauncher
+    protontricks
   ];
 
   # aliases
