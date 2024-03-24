@@ -35,7 +35,7 @@
 
   # enable gaming software
   programs.steam.enable = true;
-  programs.gammemode = {
+  programs.gamemode = {
     enable = true;
     enableRenice = true;
     settings = {
