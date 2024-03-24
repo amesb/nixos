@@ -35,8 +35,8 @@
   };
 
   # enable network streaming of audio (export and import)
-  hardware.pulseaudio.zeroconf.discovery.enable
-  hardware.pulseaudio.zeroconf.publish.enable
+  hardware.pulseaudio.zeroconf.discovery.enable = true;
+  hardware.pulseaudio.zeroconf.publish.enable = true;
 
 
   # This value determines the NixOS release from which the default
