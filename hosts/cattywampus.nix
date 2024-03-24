@@ -20,18 +20,6 @@
 
   # hostname
   networking.hostName = "cattywampus"; # Define your hostname.
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.amesb = {
-    isNormalUser = true;
-    description = "Bryan Ames";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" "audio" ];
-    packages = with pkgs; [];
-    shell = pkgs.fish;
-    ignoreShellProgramCheck = true;
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiF+v8UWPwZGfHfv2sFciVPnu41YEZXNU68pgGkmzMM b130610@gmail.com"
-    ];
-  };
 
   # enable gaming software
   programs.steam.enable = true;

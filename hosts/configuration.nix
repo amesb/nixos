@@ -12,6 +12,18 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
+  # default user
+  users.users.amesb = {
+    isNormalUser = true;
+    description = "Bryan Ames";
+    extraGroups = [ "networkmanager" "wheel" "video" "input" "audio" "libvirtd" ];
+    packages = with pkgs; [];
+    shell = pkgs.fish;
+    ignoreShellProgramCheck = true;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiF+v8UWPwZGfHfv2sFciVPnu41YEZXNU68pgGkmzMM b130610@gmail.com"
+    ];
+  };
 
   #
   # Core System Components
