@@ -27,6 +27,11 @@
   # enable non-root access to keyboard firmware
   hardware.keyboard.qmk.enable = true;
 
+  # enable bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  services.blueman.enable = true;
+
   # have to let the system use my gpu even though it isn't technically
   # reproduceable due to gpu driver shennanigans
   hardware.opengl = {

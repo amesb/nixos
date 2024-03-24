@@ -1,5 +1,5 @@
 {
-fps_limit = "0,33,55,83,165";
+fps_limit = "165,0,33,55,83";
 fps_limit_method = "early";
 full = true;
 #text_outline = true;
