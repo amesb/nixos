@@ -159,6 +159,8 @@
     neovim
     wget
     git
+
+    libvirt-glib
   ];
 
   fonts.packages = with pkgs; [
