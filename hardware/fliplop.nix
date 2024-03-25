@@ -14,6 +14,9 @@
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ ];
 
+  # enable xbox driver
+  hardware.xone.enable = true;
+
   # enable Power Profiles Daemon for improved battery life
   services.power-profiles-daemon.enable = true;
 
