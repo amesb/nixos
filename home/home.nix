@@ -150,11 +150,16 @@
     gnome.adwaita-icon-theme
 
     # media tools
-    mpv
     ffmpeg
     imv
 
-    # anime stuff
+    # mpv stuff
+    mpv
+    yt-dlp
+    mpvScripts.uosc
+    mpvScripts.webtorrent-mpv-hook
+    mpvScripts.sponsorblock
+    mpvScripts.mpris
     adl
     anime-downloader
     trackma
