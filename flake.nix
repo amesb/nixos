@@ -10,7 +10,7 @@
     };
 
     hyprland = {
-      url = "github:hyperwm/hyprland/main";
+      url = "github:hyprwm/hyprland"
     };
   };
 
