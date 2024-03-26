@@ -32,6 +32,14 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   services.blueman.enable = true;
 
+  # configure lid and power button behavior
+  services.logind = {
+    powerKey = "hibernate";
+    powerKeyLongPress = "poweroff";
+    lidSwitch = "suspend";
+    lidSwitchExternalPower = "ignore";
+  };
+
   # have to let the system use my gpu even though it isn't technically
   # reproduceable due to gpu driver shennanigans
   hardware.opengl = {
