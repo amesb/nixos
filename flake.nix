@@ -8,9 +8,14 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland = {
+      url = "github:hyprwm/hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {self, nixpkgs, home-manager, ...}@inputs: {
+  outputs = {self, nixpkgs, home-manager, hyprland, ...}@inputs: {
     # configuration for cattywampus
     nixosConfigurations = {
       # cattywampus is my personal laptop
@@ -32,6 +37,9 @@
             };
           }
         ];
+	specialArgs = {
+	  inherit hyprland;
+	};
       };
       # fliplop is my desktop computer
       # ryzen 5800x3d with 64GB DDR4-3200
