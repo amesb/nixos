@@ -8,9 +8,14 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland = {
+      url = "github:hyperwm/hyprland#hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {self, nixpkgs, home-manager, ...}@inputs: {
+  outputs = {self, nixpkgs, home-manager, hyprland, ...}@inputs: {
     # configuration for cattywampus
     nixosConfigurations = {
       # cattywampus is my personal laptop
