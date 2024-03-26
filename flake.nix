@@ -36,6 +36,9 @@
             };
           }
         ];
+	specialArgs = {
+	  inherit hyprland;
+	};
       };
       # fliplop is my desktop computer
       # ryzen 5800x3d with 64GB DDR4-3200

@@ -37,7 +37,7 @@
   # enable hyprland as compositor
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${system}.default;
+    package = hyprland.packages.${system}.default;
   };
 
 
