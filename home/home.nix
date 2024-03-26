@@ -138,6 +138,7 @@
     inkscape
     libreoffice
     bibata-cursors
+    wofi
 
     # audio tools
     lsp-plugins
