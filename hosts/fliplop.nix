@@ -1,6 +1,6 @@
 # fliplop system configuration
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, hyprland, ... }:
 
 {
   imports =
@@ -20,6 +20,12 @@
 
   # hostname
   networking.hostName = "fliplop"; # Define your hostname.
+
+  # enable hyprland as compositor
+  programs.hyprland = {
+    enable = true;
+    package = hyprland.packages.${pkgs.system}.default;
+  };
 
   programs.steam.enable = true;
   programs.gamemode = {
