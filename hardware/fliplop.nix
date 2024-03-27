@@ -17,6 +17,9 @@
   # enable xbox driver
   hardware.xone.enable = true;
 
+  # enable varios steam hardware like controllers and vr
+  hardware.steam-hardware.enable = true;
+
   # enable Power Profiles Daemon for improved battery life
   services.power-profiles-daemon.enable = true;
 
