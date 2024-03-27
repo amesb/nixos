@@ -61,6 +61,9 @@
             };
           }
         ];
+	specialArgs = {
+	  inherit hyprland;
+	};
       };
     };
   };
