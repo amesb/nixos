@@ -38,6 +38,7 @@
       };
     };
   };
+  programs.gamescope.enable = true;
 
   # enable network streaming of audio (export and import)
   hardware.pulseaudio.zeroconf.discovery.enable = true;
