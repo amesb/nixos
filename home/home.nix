@@ -117,6 +117,7 @@
     amdgpu_top
     rocmPackages.rocm-smi
     ryzenadj
+    powertop
 
     # vanity
     neofetch
