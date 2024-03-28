@@ -56,4 +56,6 @@
       gamescope
     ];
   };
+
+  hardware.steam-hardware.enable = true;
 }
