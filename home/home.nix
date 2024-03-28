@@ -140,6 +140,7 @@
     libreoffice
     bibata-cursors
     wofi
+    webcord-vencord
 
     # audio tools
     lsp-plugins
