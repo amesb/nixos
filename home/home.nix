@@ -141,6 +141,7 @@
     bibata-cursors
     wofi
     webcord-vencord
+    vial
 
     # audio tools
     lsp-plugins
