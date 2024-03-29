@@ -100,6 +100,7 @@
     brightnessctl
     bc
     way-displays
+    chezmoi
 
     # compression/decompression
     zip
@@ -117,6 +118,7 @@
     amdgpu_top
     rocmPackages.rocm-smi
     ryzenadj
+    powertop
 
     # vanity
     neofetch
@@ -138,6 +140,12 @@
     inkscape
     libreoffice
     bibata-cursors
+    wofi
+    webcord-vencord
+    via
+    vial
+    mako
+    libnotify
 
     # audio tools
     lsp-plugins

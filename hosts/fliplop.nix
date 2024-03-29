@@ -1,6 +1,6 @@
 # fliplop system configuration
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, hyprland, ... }:
 
 {
   imports =
@@ -21,6 +21,12 @@
   # hostname
   networking.hostName = "fliplop"; # Define your hostname.
 
+  # enable hyprland as compositor
+  programs.hyprland = {
+    enable = true;
+    package = hyprland.packages.${pkgs.system}.default;
+  };
+
   programs.steam.enable = true;
   programs.gamemode = {
     enable = true;
@@ -32,6 +38,8 @@
       };
     };
   };
+
+  programs.gamescope.enable = true;
 
   # enable network streaming of audio (export and import)
   hardware.pulseaudio.zeroconf.discovery.enable = true;
