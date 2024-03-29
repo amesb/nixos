@@ -100,6 +100,7 @@
     brightnessctl
     bc
     way-displays
+    chezmoi
 
     # compression/decompression
     zip
