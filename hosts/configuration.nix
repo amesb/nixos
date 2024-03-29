@@ -24,9 +24,9 @@
     packages = with pkgs; [];
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiF+v8UWPwZGfHfv2sFciVPnu41YEZXNU68pgGkmzMM b130610@gmail.com"
-    ];
+    #openssh.authorizedKeys.keys = [
+    #  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIiF+v8UWPwZGfHfv2sFciVPnu41YEZXNU68pgGkmzMM b130610@gmail.com"
+    #];
   };
 
   #
@@ -107,6 +107,11 @@
       AddKeysToAgent yes
     '';
 
+  };
+
+  # fix issue with ssh-add not knowing where the ssh-agent socket is
+  environment.variables = {
+    SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/ssh-agent";
   };
 
   # Enable file sync with syncthing
