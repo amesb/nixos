@@ -168,7 +168,6 @@
     mpvScripts.webtorrent-mpv-hook
     mpvScripts.sponsorblock
     mpvScripts.mpris
-    animdl
     adl
     trackma
 
