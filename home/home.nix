@@ -168,8 +168,8 @@
     mpvScripts.webtorrent-mpv-hook
     mpvScripts.sponsorblock
     mpvScripts.mpris
+    animdl
     adl
-    anime-downloader
     trackma
 
     # games
