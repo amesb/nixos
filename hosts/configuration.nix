@@ -48,6 +48,12 @@
   # enable non-priviledged mounting of disks through udisks
   services.udisks2.enable = true;
 
+  # make via work with udev for qmk keyboards
+  services.udev.packages = with pkgs; [
+    via
+    vial
+  ];
+
   # Enable sound
 
   # allow realtime permissions for pipewire
