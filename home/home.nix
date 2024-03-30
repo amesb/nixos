@@ -175,6 +175,7 @@
     prismlauncher
     protontricks
     gamescope
+    openmw
   ];
 
   # aliases
