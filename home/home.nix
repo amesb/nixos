@@ -174,6 +174,7 @@
     # games
     prismlauncher
     protontricks
+    gamescope
   ];
 
   # aliases
