@@ -176,7 +176,14 @@
     protontricks
     gamescope
     openmw
-    lutris
+    (lutris.override {
+     extraPkgs = pkgs: [
+       # List package dependencies here
+       gamescope
+       gamemode
+       mangohud
+     ];
+    })
   ];
 
   # aliases
