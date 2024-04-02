@@ -101,6 +101,8 @@
     bc
     way-displays
     chezmoi
+    fd
+    fzf
 
     # compression/decompression
     zip
@@ -174,6 +176,7 @@
     # games
     prismlauncher
     protontricks
+    protonup-qt
     gamescope
     openmw
     (lutris.override {
