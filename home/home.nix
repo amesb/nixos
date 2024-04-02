@@ -176,6 +176,7 @@
     protontricks
     gamescope
     openmw
+    lutris
   ];
 
   # aliases
