@@ -103,6 +103,7 @@
     chezmoi
     fd
     fzf
+    xxd
 
     # compression/decompression
     zip

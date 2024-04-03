@@ -171,6 +171,7 @@
     wget
     git
     libvirt-glib
+    fzf
   ];
 
   fonts.packages = with pkgs; [
@@ -181,4 +182,9 @@
 
   # software that I prefer to install at a system level rather than in home-manager
   programs.dconf.enable = true;
+
+  programs.fzf = {
+    keybindings = true;
+    fuzzyCompletion = true;
+  };
 }
