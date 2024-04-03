@@ -180,6 +180,7 @@
     protonup-qt
     gamescope
     openmw
+    ludsavi
     (lutris.override {
      extraPkgs = pkgs: [
        # List package dependencies here
