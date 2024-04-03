@@ -104,6 +104,7 @@
     fd
     fzf
     xxd
+    trash-cli
 
     # compression/decompression
     zip
