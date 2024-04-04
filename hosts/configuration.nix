@@ -176,7 +176,7 @@
     libvirt-glib
     fzf
     polkit
-    polkit_gnome
+    kdePackages.polkit-kde-agent-1
   ];
 
   fonts.packages = with pkgs; [
