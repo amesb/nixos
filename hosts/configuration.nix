@@ -187,7 +187,7 @@
     enable = true;
     gpuOverclock = {
       enable = true;
-      ppfeaturemask = true;
+      ppfeaturemask = "0xffffffff";
     };
   };
 
