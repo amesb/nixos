@@ -183,6 +183,14 @@
   # software that I prefer to install at a system level rather than in home-manager
   programs.dconf.enable = true;
 
+  programs.corectrl = {
+    enable = true;
+    gpuOverclock = {
+      enable = true;
+      ppfeaturemask = true;
+    };
+  };
+
   programs.fzf = {
     keybindings = true;
     fuzzyCompletion = true;

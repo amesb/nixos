@@ -149,7 +149,6 @@
     via
     vial
     mako
-    corectrl
     libnotify
 
     # audio tools
