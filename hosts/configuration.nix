@@ -176,6 +176,7 @@
     libvirt-glib
     fzf
     polkit
+    polkit_gnome
   ];
 
   fonts.packages = with pkgs; [
