@@ -54,6 +54,9 @@
     vial
   ];
 
+  # enable polkit for privilege escalation
+  security.polkit.enable = true;
+
   # Enable sound
 
   # allow realtime permissions for pipewire
@@ -172,6 +175,7 @@
     git
     libvirt-glib
     fzf
+    polkit
   ];
 
   fonts.packages = with pkgs; [
