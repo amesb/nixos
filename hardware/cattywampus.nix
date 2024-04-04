@@ -50,6 +50,7 @@
       libvdpau-va-gl
       mangohud
       gamescope
+      amdvlk
     ];
     extraPackages32 = with pkgs; [
       mangohud
