@@ -112,6 +112,9 @@
 
   };
 
+  # enable firmware and uefi updates
+  services.fwupd.enable = true;
+
   # fix issue with ssh-add not knowing where the ssh-agent socket is
   environment.variables = {
     SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/ssh-agent";
