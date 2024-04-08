@@ -9,6 +9,8 @@
       ./configuration.nix
       # include hardware specific configurations
       ../hardware/cattywampus.nix
+      # enable gaming software
+      ./gaming.nix
     ];
 
   # Bootloader.
@@ -20,19 +22,6 @@
 
   # hostname
   networking.hostName = "cattywampus"; # Define your hostname.
-
-  # enable gaming software
-  programs.steam.enable = true;
-  programs.gamemode = {
-    enable = true;
-    enableRenice = true;
-    settings = {
-      general = {
-        softrealtime = "auto";
-        renice = 10;
-      };
-    };
-  };
 
   # enable hyprland as compositor
   programs.hyprland = {

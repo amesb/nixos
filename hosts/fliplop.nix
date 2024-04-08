@@ -9,6 +9,8 @@
       ./configuration.nix
       # include hardware specific configurations
       ../hardware/fliplop.nix
+      # enable gaming software
+      ./gaming.nix
     ];
 
   # Bootloader.
@@ -26,20 +28,6 @@
     enable = true;
     package = hyprland.packages.${pkgs.system}.default;
   };
-
-  programs.steam.enable = true;
-  programs.gamemode = {
-    enable = true;
-    enableRenice = true;
-    settings = {
-      general = {
-        softrealtime = "auto";
-        renice = 10;
-      };
-    };
-  };
-
-  programs.gamescope.enable = true;
 
   # enable network streaming of audio (export and import)
   hardware.pulseaudio.zeroconf.discovery.enable = true;
