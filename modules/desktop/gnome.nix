@@ -27,7 +27,7 @@
 
   # enable extensions
   environment.systemPackages = with pkgs.gnomeExtensions; [
-    gnomeExtensions.appindicator
+    appindicator
   ];
 
 }
