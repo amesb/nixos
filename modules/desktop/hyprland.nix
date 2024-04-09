@@ -1,5 +1,5 @@
 # configuration to enable hyprland
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, hyprland, ... }: {
 
   # enable hyprland as compositor
   programs.hyprland = {
