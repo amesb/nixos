@@ -9,6 +9,8 @@
       ./configuration.nix
       # include hardware specific configurations
       ../hardware/cattywampus.nix
+      # enable gnome desktop
+      ../modules/desktop/gnome.nix
       # enable gaming software
       ../modules/gaming.nix
     ];
