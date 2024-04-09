@@ -20,7 +20,7 @@
   users.users.amesb = {
     isNormalUser = true;
     description = "Bryan Ames";
-    extraGroups = [ "networkmanager" "wheel" "video" "input" "audio" "libvirtd" "i2c" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "input" "audio" "libvirtd" "i2c" "scanner" "lp" ];
     packages = with pkgs; [];
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
@@ -96,6 +96,16 @@
       };
     };
   };
+
+  # enable scanners
+  hardware.sane.enable = true;
+  hardware.sane.drivers.scanSnap.enable = true;
+  # the below may be necessary
+  #nixpkgs.config.sane.snapscanFirmware = pkgs.fetchurl {
+  #  # https://wiki.ubuntuusers.de/Scanner/Epson_Perfection/#Unterstuetzte-Geraete
+  #  url = "https://media-cdn.ubuntu-de.org/wiki/attachments/52/46/Esfw41.bin"; #Epson Perfection 2480
+  #  sha256 = "00cv25v4xlrgp3di9bdfd07pffh9jq2j0hncmjv3c65m8bqhjglq";
+  #};
 
   # enable virtualization via virtd and qemu
   virtualisation.libvirtd.enable = true;
