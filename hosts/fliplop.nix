@@ -9,8 +9,8 @@
       ./configuration.nix
       # include hardware specific configurations
       ../hardware/fliplop.nix
-      # enable gnome desktop
-      ../modules/desktop/gnome.nix
+      # enable preferred desktop
+      ../modules/desktop/hyprland.nix
       # enable gaming software
       ../modules/gaming.nix
     ];
