@@ -1,5 +1,5 @@
 # configuration to enable gnome with my preferred defaults
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, ... }: {
 
   # enable core gnome services
   services.xserver.displayManager.gdm.enable = true;
