@@ -5,6 +5,8 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  # disable pulseaudio because we use pipewire in this house
+  hardware.pulseaudio.enable = false;
 
   # exclude unneeded packages
   environment.gnome.excludePackages = (with pkgs; [
