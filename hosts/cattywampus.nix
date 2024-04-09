@@ -10,7 +10,7 @@
       # include hardware specific configurations
       ../hardware/cattywampus.nix
       # enable gaming software
-      ./gaming.nix
+      ../modules/gaming.nix
     ];
 
   # Bootloader.
@@ -22,12 +22,6 @@
 
   # hostname
   networking.hostName = "cattywampus"; # Define your hostname.
-
-  # enable hyprland as compositor
-  programs.hyprland = {
-    enable = true;
-    package = hyprland.packages.${pkgs.system}.default;
-  };
 
   # enable network streaming of audio (export and import)
   hardware.pulseaudio.zeroconf.discovery.enable = true;

@@ -9,8 +9,10 @@
       ./configuration.nix
       # include hardware specific configurations
       ../hardware/fliplop.nix
+      # enable gnome desktop
+      ../modules/desktop/gnome.nix
       # enable gaming software
-      ./gaming.nix
+      ../modules/gaming.nix
     ];
 
   # Bootloader.
@@ -22,13 +24,6 @@
 
   # hostname
   networking.hostName = "fliplop"; # Define your hostname.
-
-  # enable hyprland as compositor
-  programs.hyprland = {
-    enable = true;
-    package = hyprland.packages.${pkgs.system}.default;
-  };
-
   # enable network streaming of audio (export and import)
   hardware.pulseaudio.zeroconf.discovery.enable = true;
   hardware.pulseaudio.zeroconf.publish.enable = true;

@@ -129,17 +129,6 @@
     configDir = "/home/amesb/.config/syncthing";
   };
 
-  # enable portals for screensharing etc
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
-
-    config = {
-      common.default = [ "wlr" "gtk" ];
-    };
-  };
-
   #
   # localization and language
   #
@@ -178,8 +167,6 @@
     git
     libvirt-glib
     fzf
-    polkit
-    kdePackages.polkit-kde-agent-1
   ];
 
   fonts.packages = with pkgs; [
